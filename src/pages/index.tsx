@@ -29,6 +29,7 @@ export default function Home({
 }
 
 // this function should return an object
+// server side rendering - user will see a blank screen while the site loads and see everything all at once whereas with react you could see a 'loading' page
 export async function getServerSideProps({}: GetServerSideProps) {
   const { results } = await (
     await fetch(`http://localhost:3000/api/movies`)
